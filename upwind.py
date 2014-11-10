@@ -4,7 +4,7 @@ from numpy import array, zeros
 
 def trasporto_upwind(M, N, xmin, xmax, tinz, tfin, vel, ic):
     dx = (xmax - xmin) / M
-    dt = (tinz - tfin) / N
+    dt = (tfin - tinz) / N
 
     x = xmin + array(range(0, M + 1)) * dx
     t = array(range(0, N + 1)) * dt
