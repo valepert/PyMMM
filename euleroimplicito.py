@@ -1,4 +1,3 @@
-from __future__ import division
 from numpy import array, diagflat, eye, ones, zeros
 from numpy.linalg import solve
 
@@ -27,7 +26,7 @@ def trasporto_ei_bcp(M, N, xmin, xmax, tinz, tfin, vel, ic):
     A[M, 1] = 0.5 * nu
 
     if cfl > 1:
-        print "CFL " + str(cfl)
+        print(f"CFL {cfl}")
         raise ArithmeticError
 
     else:
@@ -59,7 +58,7 @@ def burgers_ei_bcp(M, N, xmin, xmax, tinz, tfin, ic):
         cfl = nu * dt / dx
 
         if cfl > 1:
-            print "CFL " + str(cfl)
+            print(f"CFL {cfl}")
             raise ArithmeticError
 
         else:
