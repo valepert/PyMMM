@@ -1,4 +1,3 @@
-from __future__ import division
 from numpy import array, zeros
 
 
@@ -19,7 +18,7 @@ def trasporto_lw_bcp(M, N, xmin, xmax, tinz, tfin, vel, ic):
     nu = a * dt / dx
 
     if cfl > 1:
-        print "CFL " + str(cfl)
+        print(f"CFL {cfl}")
         raise ArithmeticError
     else:
         for n in range(0, N):

@@ -1,4 +1,3 @@
-from __future__ import division
 from upwind import trasporto_upwind
 from numpy import absolute, max, sqrt, sum, zeros
 
@@ -20,7 +19,7 @@ def errore_trasporto_upwind(n_iter, M, N, xmin, xmax, tinz, tfin, vel, ic):
     esup[0] = max(abs(u[:, -1] - uexac))
 
     for i in range(1, n_iter):
-        print i
+        print(i)
         M *= 2
         dx[i] = (xmax - xmin) / M
         (u, x, t) = trasporto_upwind(M, N, xmin, xmax, tinz, tfin, vel, ic)
